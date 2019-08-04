@@ -1,21 +1,19 @@
 package com.piyush.ds.trees.operation;
 
 import java.util.LinkedList;
-import java.util.Stack;
+import java.util.Queue;
 
 /**
- * this progran demonstrate how to create a binary tree
- * traverse that created binary tree in in-order or LNR  
  * 
  * @author Piyush Mittal
  *
  */
 
-public class LevelOrderTraversal {
+public class InOrderTraversal {
 
 	public static void main(String[] args) {
-		Node root=new LevelOrderTraversal().createTree();
-		new LevelOrderTraversal().levelOrderTraversal(root);
+		Node root=new InOrderTraversal().createTree();
+		new InOrderTraversal().levelOrderTraversal(root);
 	}
 	
 	
@@ -33,11 +31,6 @@ public class LevelOrderTraversal {
 		}
 	}
 
-	/**
-	 * creating a tree
-	 * 
-	 * @return
-	 */
 	Node createTree() {
 		Node root=new Node(10, null, null);
 		
@@ -77,27 +70,25 @@ public class LevelOrderTraversal {
 	}
 	
 	
-	/**
-	 * traversing a tree in in-order
-	 */
-	Stack<Node> stack=new Stack<>();
+	
+	Queue<Node> q=new LinkedList<>();
 	void levelOrderTraversal(Node root) {
-		Node node=root;	
-		
-		while(node!=null || !stack.empty()) {
-		//push node left till its empty
-		while(node!=null) {
-			stack.push(node);
-			node=node.left;
-		}
-		
-		if(node == null && !stack.empty())
+		Node temp=root;
+		q.add(temp);
+
+		while(!q.isEmpty())
 		{
-			node=stack.pop();
+			Node node=q.poll();
 			System.out.println(node.data);
-			node=node.right;
+
+			
+			if(node.left!=null)
+				q.add(node.left);
+			if(node.right!=null)
+				q.add(node.right);
+			
 		}
-		}
+		
 	}
 
 }

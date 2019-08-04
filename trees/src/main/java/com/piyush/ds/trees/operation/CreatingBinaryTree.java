@@ -41,7 +41,7 @@ public class CreatingBinaryTree {
 		
 		tree.node= node;
 		tree.node.left=new Node(8,null,null);
-		tree.node.left=new Node(12,null,null);
+		tree.node.right=new Node(12,null,null);
 
 		
 		/* following is the tree after above statement 

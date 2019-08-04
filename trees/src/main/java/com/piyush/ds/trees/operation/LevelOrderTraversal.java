@@ -90,13 +90,9 @@ public class LevelOrderTraversal {
 			stack.push(node);
 			node=node.left;
 		}
-		
-		if(node == null && !stack.empty())
-		{
 			node=stack.pop();
 			System.out.println(node.data);
 			node=node.right;
-		}
 		}
 	}
 

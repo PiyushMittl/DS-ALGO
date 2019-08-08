@@ -1,0 +1,13 @@
+Step1: create a stack1
+Step2: create a stack2
+Step3: push node to the stack1
+Step4: initialize node with root (root is your tree root)
+Step5: iterate till stack!=empty
+Step6: pop the data from stack1
+Step7: push the node in stack2 
+Step8: check if left child exists 
+          if yes then push that child in stack1
+Step9: check if right child exists 
+          if yes then push that child in stack1
+Step10: repeat from Step5 till Step9
+Step11: iterate and print stack2

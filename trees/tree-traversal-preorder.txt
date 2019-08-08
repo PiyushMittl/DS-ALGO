@@ -1,8 +1,8 @@
 Step1: create a stack
 Step2: initialize node with root (root is your tree root)
-Step3: iterate till node!=null or stack!=empty
-Step4: iterate left child while node.left!=empty
-Step5: once the node is empty pop the node 
-Step6: print the data of node
-Step7: initialize node with node.right
+Step3: iterate till stack!=empty
+Step4: pop the data from stack
+Step5: print popped node data 
+Step6: check if right child exists if yes then push that child in stack
+Step7: check if left child exists if yes then push that child in stack
 Step8: repeat from Step3 till Step7 

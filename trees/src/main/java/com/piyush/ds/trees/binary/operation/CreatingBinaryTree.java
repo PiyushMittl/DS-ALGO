@@ -1,4 +1,4 @@
-package com.piyush.ds.trees.operation;
+package com.piyush.ds.trees.binary.operation;
 
 /**
  * 

@@ -1,4 +1,4 @@
-package com.piyush.ds.trees.operation;
+package com.piyush.ds.trees.binary.operation;
 
 import java.util.Stack;
 
@@ -8,11 +8,11 @@ import java.util.Stack;
  *
  */
 
-public class PostOrderTraversal {
+public class PreOrderTraversal {
 
 	public static void main(String[] args) {
-		Node root=new PostOrderTraversal().createTree();
-		new PostOrderTraversal().levelOrderTraversal(root);
+		Node root=new PreOrderTraversal().createTree();
+		new PreOrderTraversal().levelOrderTraversal(root);
 	}
 	
 	
@@ -70,26 +70,22 @@ public class PostOrderTraversal {
 	
 	
 	
-	Stack<Node> stack1=new Stack<>();
-	Stack<Node> stack2=new Stack<>();
-	
+	Stack<Node> stack=new Stack<>();
 	void levelOrderTraversal(Node root) {
 		Node node=root;
-		stack1.push(node);
+		stack.push(node);
 		
-		while(!stack1.isEmpty())
+		while(!stack.isEmpty())
 		{
-			node=stack1.pop();
-			stack2.push(node);
+			node=stack.pop();
+			System.out.println(node.data);
+
 			
-			if(node.left!=null)
-				stack1.push(node.left);			
 			if(node.right!=null)
-				stack1.push(node.right);
+				stack.push(node.right);
+			if(node.left!=null)
+				stack.push(node.left);			
 		}
-		
-		while(!stack2.isEmpty())
-			System.out.println(stack2.pop().data);
 	}
 
 }

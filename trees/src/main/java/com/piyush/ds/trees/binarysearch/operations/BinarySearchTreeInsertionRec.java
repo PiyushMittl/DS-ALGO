@@ -1,15 +1,22 @@
 package com.piyush.ds.trees.binarysearch.operations;
 
-public class BinarySearchTreeInsertion {
+/**
+ * 
+ * @author Piyush Mittal
+ *
+ *this is a sample program to demonstrate insertion operation for BST
+ *
+ */
+public class BinarySearchTreeInsertionRec {
 
 	public static void main(String[] args) {
-		new BinarySearchTreeInsertion().binarySearchTreeInsertion();
+		new BinarySearchTreeInsertionRec().binarySearchTreeInsertion();
 	}
 
 	private Node binarySearchTreeInsertion() {
 		Node node1 = new Node(50);
 		Node node2 = new Node(45);
-		Node node3 = new Node(40);
+		Node node3 = new Node(60);
 		Node node4 = new Node(35);
 		Node node5 = new Node(30);
 
@@ -22,29 +29,18 @@ public class BinarySearchTreeInsertion {
 	}
 
 	public Node addNode(Node node, Node root) {
-		Node tempHead = root;
 
-		if (tempHead == null) {
-			tempHead = node;
-			return tempHead;
+		if (root == null) {
+			return node;
 		}
-
-		while (tempHead != null) {
-			if (node.data > tempHead.data) {
-				if (tempHead.left == null) {
-					tempHead.left = node;
-					return tempHead;	
-				} else
-					tempHead = tempHead.left;
-			} else {
-				if (tempHead.right == null) {
-					tempHead.right = node;
-					return tempHead;
-				} else
-					tempHead = tempHead.right;
-			}
+		if (node.data > root.data) {
+			System.out.println("going right");
+			root.left = addNode(node, root.left);
+		} else if (node.data < root.data) {
+			System.out.println("going left");
+			root.right = addNode(node, root.right);
 		}
-		return tempHead;
+		return root;
 	}
 
 	class Node {

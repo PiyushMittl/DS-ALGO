@@ -1,0 +1,17 @@
+[root] is the root node if a tree
+[teampHead] is temporary root node
+[node] is the node to be inserted
+
+Step1: if [tempHead] is null then node is your root node
+		assign node reference to tempHead and return tempHead
+Step2: while condition if [tempHead] is not null
+Step3: check if [node.data] > [tempHead.data]
+       if yes then check if [tempHead.left] is null
+       		if yes then [tempHead.left] = [node]
+       		and return [tempHead]
+       		else [tempHead] = [tempHead.left]
+       if no then check if [tempHead.right] is null
+       		if yes then [tempHead.right] = [node]
+       		and return [tempHead]
+       		else [tempHead] = [tempHead.rigt]
+Step5: repeat step3 until [teampHead] is not null

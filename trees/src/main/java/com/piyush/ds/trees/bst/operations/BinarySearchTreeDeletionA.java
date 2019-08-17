@@ -70,12 +70,14 @@ public class BinarySearchTreeDeletionA {
 			}
 			// Condition 2:
 			// if there is only one left or right child is available
-			else if (root.left != null && root.right==null) {
+			// root.left is not null
+			else if (root.right==null) {
 				Node temp = root.left;
 				root.left = null;
 				root = temp;
 				return root;
-			} else if (root.right != null && root.left==null) {
+			} else if (root.left==null) {
+				// root.right is not null
 				Node temp = root.right;
 				root.right = null;
 				root = temp;

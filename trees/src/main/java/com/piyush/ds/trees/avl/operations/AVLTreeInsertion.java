@@ -1,4 +1,4 @@
-package com.piyush.ds.trees.binarysearch.operations;
+package com.piyush.ds.trees.avl.operations;
 
 /**
  * 
@@ -7,10 +7,10 @@ package com.piyush.ds.trees.binarysearch.operations;
  *this is a sample program to demonstrate insertion operation for BST
  *
  */
-public class BinarySearchTreeInsertionRec {
+public class AVLTreeInsertion {
 
 	public static void main(String[] args) {
-		new BinarySearchTreeInsertionRec().binarySearchTreeInsertion();
+		new AVLTreeInsertion().binarySearchTreeInsertion();
 	}
 
 	private Node binarySearchTreeInsertion() {

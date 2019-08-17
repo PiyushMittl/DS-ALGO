@@ -1,4 +1,4 @@
-package com.piyush.ds.trees.binarysearch.operations;
+package com.piyush.ds.trees.bst.operations;
 public class BinarySearchTreeDeleteB {
 	public static class TreeNode {
 		int data;

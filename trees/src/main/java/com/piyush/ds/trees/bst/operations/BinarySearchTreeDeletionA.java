@@ -137,8 +137,6 @@ public class BinarySearchTreeDeletionA {
 
 	/**
 	 * 
-	 * @author Piyush Mittal
-	 * 
 	 *         Node class which has left,right pointer and data
 	 *
 	 */

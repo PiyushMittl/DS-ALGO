@@ -1,7 +1,5 @@
 package com.piyush.ds.linkedlist.operation;
 
-
-
 /**
  * 
  * @author Piyush Mittal

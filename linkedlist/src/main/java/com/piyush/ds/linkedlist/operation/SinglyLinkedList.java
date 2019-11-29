@@ -59,7 +59,7 @@ public class SinglyLinkedList {
 				node.next = prev;
 				temp.next = node;
 			} else
-				System.out.println("index is greater than list size and should be less than list zise");
+				System.out.println("\n index is greater than list size and should be less than list zise");
 		}
 	}
 
@@ -70,7 +70,7 @@ public class SinglyLinkedList {
 	public void printList() {
 		SinglyLinkedList.Node temp = head;
 		while (temp != null) {
-			System.out.println(temp.data);
+			System.out.print(temp.data+" ");
 			temp = temp.next;
 		}
 	}
@@ -89,7 +89,7 @@ public class SinglyLinkedList {
 		linkedList.addFirst(node3);
 		linkedList.addFirst(node4);
 		// traverse list
-		System.out.println("node inserted at beginning and list is :");
+		System.out.println("\n node inserted at beginning and list is :");
 		linkedList.printList();
 
 		Node node5 = linkedList.new Node(5);
@@ -102,7 +102,7 @@ public class SinglyLinkedList {
 		linkedList.addLast(node7);
 		linkedList.addLast(node8);
 		// traverse list
-		System.out.println("node inserted at last and list is :");
+		System.out.println("\n node inserted at last and list is :");
 		linkedList.printList();
 
 		Node node100 = linkedList.new Node(100);

@@ -15,7 +15,8 @@ public class InOrderTraversal {
 
 	public static void main(String[] args) {
 		Node root=new InOrderTraversal().createTree();
-		new InOrderTraversal().levelOrderTraversal(root);
+		new InOrderTraversal().inOrderTraversalStack(root);
+		new InOrderTraversal().inOrderTraversalRecursion(root);
 	}
 	
 	
@@ -81,7 +82,7 @@ public class InOrderTraversal {
 	 * traversing a tree in in-order
 	 */
 	Stack<Node> stack=new Stack<>();
-	void levelOrderTraversal(Node root) {
+	void inOrderTraversalStack(Node root) {
 		Node node=root;	
 		
 		while(node!=null || !stack.empty()) {
@@ -94,6 +95,18 @@ public class InOrderTraversal {
 			System.out.println(node.data);
 			node=node.right;
 		}
+	}
+	public int inOrderTraversalRecursion(Node root) {
+
+        if(root==null)
+        return 0;
+
+        inOrderTraversalRecursion(root.left);
+        System.out.println(root.data);
+        inOrderTraversalRecursion(root.right);
+        
+        return 0;
+
 	}
 
 }

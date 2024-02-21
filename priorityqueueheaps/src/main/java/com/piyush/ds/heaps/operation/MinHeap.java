@@ -1,5 +1,4 @@
-package com.piyush.ds.heap.programs;
-
+package com.piyush.ds.heaps.operation;
 import java.util.*;
 
 /**
@@ -34,3 +33,4 @@ public class MinHeap {
     }
 
 }
+
